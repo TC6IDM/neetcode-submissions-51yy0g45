@@ -1,0 +1,14 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = re.sub(r'[^\w\s]', '', s.replace(" ","").lower())
+        l=0
+        r=len(s)-1
+
+        while l<=r:
+            print (s[l])
+            print(s[r])
+            if s[l]!=s[r]: return False
+            l+=1
+            r-=1
+
+        return True
